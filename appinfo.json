@@ -1,10 +1,10 @@
 {
-  "uuid":         "a1230861-d4eb-4f6e-a2d0-eaa2a07797dd",
-  "shortName":    "Revolution",
-  "longName":     "Revolution",
-  "companyName":  "Douwe Maan",
-  "versionCode":  20,
-  "versionLabel": "2.0",
+  "uuid":         "5A3B28EF-BAE0-4086-B542-870EFEF793F6",
+  "shortName":    "Revolution+",
+  "longName":     "Revolution+",
+  "companyName":  "Ben10do & Douwe Maan",
+  "versionCode":  21,
+  "versionLabel": "2.00",
   "watchapp": {
     "watchface": true
   },

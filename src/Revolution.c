@@ -1,4 +1,5 @@
 // Copyright (c) 2013 Douwe Maan <http://www.douwemaan.com/>
+// Also features additions by Ben10do.
 // The above copyright notice shall be included in all copies or substantial portions of the program.
 
 // Envisioned as a watchface by Jean-Noël Mattern
@@ -9,8 +10,8 @@
 
 // Settings
 #define USE_AMERICAN_DATE_FORMAT      false
-#define VIBE_ON_HOUR                  false
-#define TIME_SLOT_ANIMATION_DURATION  500
+#define VIBE_ON_HOUR                  true
+#define TIME_SLOT_ANIMATION_DURATION  375
 
 // Magic numbers
 #define SCREEN_WIDTH        144
@@ -277,7 +278,7 @@ void slide_in_digit_image_into_time_slot(TimeSlot *time_slot, int digit_value) {
 
   Animation *animation = (Animation *)time_slot->slide_in_animation;
   animation_set_duration( animation,  TIME_SLOT_ANIMATION_DURATION);
-  animation_set_curve(    animation,  AnimationCurveLinear);
+  animation_set_curve(    animation,  AnimationCurveEaseOut);
   animation_set_handlers( animation,  (AnimationHandlers){
     .stopped = (AnimationStoppedHandler)time_slot_slide_in_animation_stopped
   }, (void *)time_slot);
@@ -322,7 +323,7 @@ void slide_out_digit_image_from_time_slot(TimeSlot *time_slot) {
 
   Animation *animation = (Animation *)time_slot->slide_out_animation;
   animation_set_duration( animation,  TIME_SLOT_ANIMATION_DURATION);
-  animation_set_curve(    animation,  AnimationCurveLinear);
+  animation_set_curve(    animation,  AnimationCurveEaseIn);
   animation_set_handlers(animation, (AnimationHandlers){
     .stopped = (AnimationStoppedHandler)time_slot_slide_out_animation_stopped
   }, (void *)time_slot);
@@ -540,7 +541,10 @@ void handle_second_tick(struct tm *tick_time, TimeUnits units_changed) {
 
 #if VIBE_ON_HOUR
   if ((units_changed & HOUR_UNIT) == HOUR_UNIT) {
-    vibes_double_pulse();
+      vibes_enqueue_custom_pattern((VibePattern) {
+          .durations = (uint32_t []) {50},
+          .num_segments = 1
+      });
   }
 #endif
 

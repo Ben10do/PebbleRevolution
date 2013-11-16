@@ -1,25 +1,19 @@
-## Revolution watchface
+## Revolution+ watchface
+
+This is a slightly modified version of Douwe Maan's Revolution watchface for the Pebble, featuring a more subtle vibration every hour, and a quicker (and in my opinion, slicker) animation.
 
 ![Photo](http://d.pr/i/Qe9k+)
 
-[Video of time animation](http://d.pr/v/nQWY)
-
-Implemented by Douwe Maan.
-
 Envisioned as a watchface by Jean-Noël Mattern (Jnm), who posted it in the ["Watch-face ideas" thread](http://forums.getpebble.com/discussion/comment/3538/#Comment_3538) on the Pebble forums.
 
-Based on the display of the [Freebox Revolution](http://www.free.fr/adsl/freebox-revolution.html), which was designed by Philippe Starck.
+Originally based on the display of the [Freebox Revolution](http://www.free.fr/adsl/freebox-revolution.html), which was designed by Philippe Starck.
 
-### Download version 2.0
+### Download
 
-* [Revolution-2.0.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-2.0.pbw)
-* [Revolution-VibeOnHour-2.0.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-VibeOnHour-2.0.pbw) (vibrates on the hour)
+Check out the [Releases section](https://github.com/Ben10do/PebbleRevolution/releases) to download!
+Much like the original, different versions are available if you don't like the hourly vibration, or if you use the American 'MM/DD' date format.
 
-#### American (date formatted as MM-DD)
-* [Revolution-American-2.0.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American-2.0.pbw)
-* [Revolution-American-VibeOnHour-2.0.pbw](https://github.com/DouweM/PebbleRevolution/raw/master/releases/Revolution-American-VibeOnHour-2.0.pbw) (vibrates on the hour)
-
-## License
+## Original License
 Copyright (c) 2013 [Douwe Maan](http://www.douwemaan.com/)
 
 This program is free software: you can redistribute it and/or modify
